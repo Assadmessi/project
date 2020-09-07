@@ -1,0 +1,13 @@
+//--------------------Image Copy Coding------------------------------------------------------
+	$image=$_FILES['rimage']['name'];
+	$folder="FoodImage/";
+	if($image)
+	{
+		$filename=$folder.$txtrid. "_" .$image;
+		$copied=copy($_FILES['rimage']['tmp_name'], $filename);
+		if(!$copied)
+		{
+			exit("Problem occured.Cannot Upload Item Image.");
+		}
+	}
+//-----------------------------------------------------------------------------------------------
